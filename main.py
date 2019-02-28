@@ -13,7 +13,7 @@ def run_multi_class_logistic_regression():
         x_train, y_train, x_val, y_val = data_loader.load_train_dataset(label)
         num_of_feature = x_train.shape[1]
         classifier = logistic_regression.LogisticRegression(num_of_feature)
-        classifier.model_train(x_train, y_train)
+        classifier.model_train(x_train, y_train, x_val, y_val)
         classifiers[label] = classifier
 
     # model prediction
